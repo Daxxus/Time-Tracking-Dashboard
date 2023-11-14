@@ -1,0 +1,224 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+/* - Mobile: 375px
+- Desktop: 1440px */
+:root {
+	--Blue: hsl(246, 80%, 60%);
+	--Light-orange: hsl(15, 100%, 70%);
+	--Soft-blue: hsl(195, 74%, 62%);
+	--Light-red: hsl(348, 100%, 68%);
+	--Lime-green: hsl(145, 58%, 55%);
+	--Violet: hsl(264, 64%, 52%);
+	--Soft-orange: hsl(43, 84%, 65%);
+	--VeryDark-blue: hsl(226, 43%, 10%);
+	--Dark-blue: hsl(235, 46%, 20%);
+	--Desaturated-blue: hsl(235, 45%, 61%);
+	--Pale-Blue: hsl(236, 100%, 87%);
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	height: 100vh;
+	color: white;
+	background-color: grey;
+	font-family: monospace;
+	font-weight: 200;
+}
+.container {
+	background-color: var(--VeryDark-blue);
+	width: 900px;
+	height: 600px;
+}
+.container .dashboard {
+	width: 700px;
+	height: 340px;
+	margin: 130px auto;
+	display: grid;
+	grid-template-columns: 3fr 9fr;
+	gap: 15px;
+}
+.dashboard .cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 15px;
+}
+.userDescription {
+	background-color: var(--Dark-blue);
+	border-radius: 8px;
+	font-size: 14px;
+}
+.user {
+	padding: 20px;
+	background-color: var(--Blue);
+	border-radius: 8px;
+	height: 220px;
+}
+.userdetails {
+	margin-top: 30px;
+}
+.userdetails h1 {
+	margin-top: 10px;
+}
+.section .period {
+	height: 120px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	color: rgb(128, 126, 126);
+	cursor: pointer;
+}
+
+.section .card {
+	border-radius: 8px;
+	background-size: cover;
+}
+.section .work {
+	background-color: var(--Light-orange);
+	background-image: url("img/icon-work.svg");
+}
+.section .play {
+	background-color: var(--Soft-blue);
+	background-image: url("img/icon-play.svg");
+}
+.section .study {
+	background-color: var(--Light-red);
+	background-image: url("img/icon-study.svg");
+}
+.section .exercise {
+	background-color: var(--Lime-green);
+	background-image: url("img/icon-exercise.svg");
+}
+.section .social {
+	background-color: var(--Violet);
+	background-image: url("img/icon-social.svg");
+}
+.section .selfCare {
+	background-color: var(--Soft-orange);
+	background-image: url("img/icon-self-care.svg");
+}
+.card .cardDescription {
+	margin-top: 30px;
+	padding: 20px 10px;
+	background-color: var(--Dark-blue);
+	border-radius: 8px;
+	height: 83%;
+}
+
+.cardDescription nav {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	font-size: 12px;
+}
+.cardDescription #hours {
+	margin: 10px auto;
+}
+.cardDescription #hours h6 {
+	margin: 10px auto;
+	font-size: 10px;
+}
+.cardDescription button {
+	position: absolute;
+	right: 10px;
+	padding: 5px;
+	padding-top: 0;
+	cursor: pointer;
+	background: none;
+	color: white;
+	border: none;
+}
+.cardDescription .icons {
+	transition: transform 0.5s;
+}
+
+ul {
+	position: absolute;
+	top: 0;
+	right: -100px;
+	list-style: none;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.5s linear;
+}
+ul li {
+	cursor: pointer;
+	padding: 5px 0;
+	transition: color 0.5s;
+}
+ul li:hover {
+	color: var(--Light-red);
+}
+
+.active {
+	visibility: visible;
+	opacity: 1;
+	transform: translateX(-95px);
+}
+.actIcon {
+	transform: translateX(-50px);
+}
+.hide {
+	display: none;
+}
+.white {
+	color: white;
+}
+
+@media (max-width: 375px) {
+	.container {
+		width: 300px;
+		height: 1000px;
+		margin-top: 500px;
+	}
+	.container .dashboard {
+		width: 250px;
+		margin: 45px auto;
+	}
+	.dashboard .cards {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 5px;
+	}
+	.section .period {
+		height: 700px;
+	}
+	.card {
+		height: 150px;
+	}
+}
+
+@media (min-width: 376px) and (max-width: 767px) {
+	.container {
+		width: 450px;
+		height: 600px;
+	}
+	.container .dashboard {
+		width: 350px;
+		margin: 50px auto;
+	}
+	.dashboard .cards {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 5px;
+	}
+	.section .period {
+		height: 270px;
+	}
+	.card {
+		width: 120px;
+	}
+}
+
+/* @media (min-width: 768px) {
+	.container {
+		width: 600px;
+	}
+	.container .dashboard {
+		width: 500px;
+	}
+} */

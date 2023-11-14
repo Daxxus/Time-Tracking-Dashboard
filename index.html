@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cb2d513767.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;500&family=Rubik:ital,wght@1,200;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Time tracking dashboard</title>
+</head>
+
+<body>
+    <div class="container">
+        <main class="dashboard">
+            <section class=" section userDescription">
+                <div class="user">
+                    <header class="pic">
+                        <img src="img/image-jeremy.png" alt="Jeremy" width="50">
+                    </header>
+                    <div class="userdetails">
+                        <h5>Report for</h5>
+                        <h1>Jeremy Robson</h1>
+                    </div>
+                </div>
+                <main class="period">
+                    <p class="daily">Daily</p>
+                    <p class="weekly">Weekly</p>
+                    <p class="monthly">Monthly</p>
+                </main>
+            </section>
+            <section class=" section cards">
+                <div class="card work">
+                    <div class="cardDescription" id="work">
+                        <nav>
+                            <h3 id="period">Work</h3>
+                            <div class="icons workIcon">
+                                <button><i class="fa-solid fa-ellipsis workDots"></i></button>
+                                <button> <i class="fas fa-times hide closeWork"></i></button>
+                            </div>
+
+                            <ul class="ulWork">
+                                <li>
+                                    <p class="daily">Daily</p>
+                                </li>
+                                <li>
+                                    <p class="weekly">Weekly</p>
+                                </li>
+                                <li>
+                                    <p class="monthly">Monthly</p>
+                                </li>
+                            </ul>
+                        </nav>
+                        <main id="hours">
+                            <h1><span id="current"></span>hrs</h1>
+                            <h6>Last <span id="spanPeriod">? -</span><span id='spanHours'></span>hrs</h6>
+                        </main>
+
+                    </div>
+                </div>
+                <div class="card play">
+                    <div class="cardDescription" id="play">
+                        <nav>
+                            <h3 id="period">Play</h3>
+                            <div class="icons playIcon">
+                                <button><i class="fa-solid fa-ellipsis playDots"></i></button>
+                                <button> <i class="fas fa-times hide closePlay"></i></button>
+                            </div>
+
+                            <ul class="ulPlay">
+                                <li>
+                                    <p class="daily">Daily</p>
+                                </li>
+                                <li>
+                                    <p class="weekly">Weekly</p>
+                                </li>
+                                <li>
+                                    <p class="monthly">Monthly</p>
+                                </li>
+                            </ul>
+                        </nav>
+                        <main id="hours">
+                            <h1><span id="current"></span>hrs</h1>
+                            <h6>Last <span id="spanPeriod">? -</span><span id='spanHours'></span>hrs</h6>
+                        </main>
+
+                    </div>
+                </div>
+
+                <div class="card study">
+                    <div class="cardDescription" id="study">
+                        <nav>
+                            <h3 id="period">Study</h3>
+                            <div class="icons studyIcon">
+                                <button><i class="fa-solid fa-ellipsis studyDots"></i></button>
+                                <button> <i class="fas fa-times hide closeStudy"></i></button>
+                            </div>
+                            <ul class="ulStudy">
+                                <li>
+                                    <p class="daily">Daily</p>
+                                </li>
+                                <li>
+                                    <p class="weekly">Weekly</p>
+                                </li>
+                                <li>
+                                    <p class="monthly">Monthly</p>
+                                </li>
+                            </ul>
+                        </nav>
+                        <main id="hours">
+                            <h1><span id="current"></span>hrs</h1>
+                            <h6>Last <span id="spanPeriod">? -</span><span id='spanHours'></span>hrs</h6>
+                        </main>
+
+                    </div>
+                </div>
+                <div class="card exercise">
+                    <div class="cardDescription" id="exercise">
+                        <nav>
+                            <h3 id="period">Exercise</h3>
+                            <div class="icons exerciseIcon">
+                                <button><i class="fa-solid fa-ellipsis excerciseDots"></i></button>
+                                <button> <i class="fas fa-times hide closeExcercise"></i></button>
+                            </div>
+                            <ul class="ulExercise">
+                                <li>
+                                    <p class="daily">Daily</p>
+                                </li>
+                                <li>
+                                    <p class="weekly">Weekly</p>
+                                </li>
+                                <li>
+                                    <p class="monthly">Monthly</p>
+                                </li>
+                            </ul>
+                        </nav>
+                        <main id="hours">
+                            <h1><span id="current"></span>hrs</h1>
+                            <h6>Last <span id="spanPeriod">? -</span><span id='spanHours'></span>hrs</h6>
+                        </main>
+
+                    </div>
+                </div>
+                <div class="card social">
+                    <div class="cardDescription" id="social">
+                        <nav>
+                            <h3 id="period">Social</h3>
+                            <div class="icons socialIcon">
+                                <button><i class="fa-solid fa-ellipsis socialDots"></i></button>
+                                <button> <i class="fas fa-times hide closeSocial"></i></button>
+                            </div>
+
+                            <ul class="ulSocial">
+                                <li>
+                                    <p class="daily">Daily</p>
+                                </li>
+                                <li>
+                                    <p class="weekly">Weekly</p>
+                                </li>
+                                <li>
+                                    <p class="monthly">Monthly</p>
+                                </li>
+                            </ul>
+                        </nav>
+                        <main id="hours">
+                            <h1><span id="current"></span>hrs</h1>
+                            <h6>Last <span id="spanPeriod">? -</span><span id='spanHours'></span>hrs</h6>
+                        </main>
+
+                    </div>
+                </div>
+
+                <div class="card selfCare">
+                    <div class="cardDescription" id="selfCare">
+                        <nav>
+                            <h3 id="period">SelfCare</h3>
+                            <div class="icons selfCareIcon">
+                                <button><i class="fa-solid fa-ellipsis selfCareDots"></i></button>
+                                <button> <i class="fas fa-times hide closeSelfCare"></i></button>
+                            </div>
+                            <ul class="ulSelfCare">
+                                <li>
+                                    <p class="daily">Daily</p>
+                                </li>
+                                <li>
+                                    <p class="weekly">Weekly</p>
+                                </li>
+                                <li>
+                                    <p class="monthly">Monthly</p>
+                                </li>
+                            </ul>
+                        </nav>
+                        <main id="hours">
+                            <h1><span id="current"></span>hrs</h1>
+                            <h6>Last <span id="spanPeriod">? -</span><span id='spanHours'></span>hrs</h6>
+                        </main>
+
+                    </div>
+                </div>
+
+
+            </section>
+        </main>
+    </div>
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
